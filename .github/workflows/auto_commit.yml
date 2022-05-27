@@ -1,0 +1,20 @@
+name: auto_md_push
+
+on: push
+
+jobs:
+ run:
+  name: auto_md_push
+  runs-on: ubuntu-latest
+
+  steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+
+      - name: Commit changes
+        uses: EndBug/add-and-commit@v9
+        with:
+          author_name: Graphite12
+          author_email: elitebook855@gmail.com
+          message: '[Bot]Success Commit'
+          add: '*.md'
