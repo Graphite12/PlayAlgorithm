@@ -1,9 +1,5 @@
 !/bin/bash
 
-date=`date`
-github_id="Graphite12"
-github_Token="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"
-github_Address="https://github.com/Graphite12/PlayAlgorithm"
 logFile="./logs/push.log"
 SourceDir="/Users/elitebook/SkillBlog/PlayAlgorithm"
 
