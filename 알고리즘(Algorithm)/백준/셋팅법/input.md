@@ -49,15 +49,20 @@ const input = fs.readFileSync('/dev/stdin').toString();
 // input[0], input[1] 배열에서 꺼내쓰면 된다.
 const input = fs.readFileSync('/dev/stdin').toString().split(' ');
 
+// input[0], input[1]이 숫자일떄
+const input = fs.readFileSync('/dev/stdin').toString().split(' ').map(Number);
+
 // 줄바꿈으로 구분
-const input = fs.readFileSync('/dev/stdin').toString().split('\n');
+const input = fs.readFileSync('/dev/stdin').toString().trim().split('\n');
 
 // 만약 인풋값이 숫자라면
 const input = fs
   .readFileSync('/dev/stdin')
   .toString()
+  .trim()
   .split(' ')
-  .map(function (a) {
-    return +a;
-  });
+  .map(Number);
+
+//만약 인풋값이 줄바뀐 숫자라면
+const input = fs.map(Number);
 ```
