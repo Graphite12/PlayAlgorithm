@@ -1,24 +1,21 @@
-let d = `3
-29
-38
-12
-57
-74
-40
-85
-61`;
+let s = `5
+OOXXOXXOOO
+OOXXOOXXOO
+OXOXOXOXOXOXOX
+OOOOOOOOOO
+OOOOXOOOOXOOOOX`;
+let [q, ...z] = s.toString().trim().split('\n');
 
-let input = d.toString().split('\n').map(Number);
-
-let bigMaMa = Math.max(...input);
-let count = 1;
-//가장 큰수 담아줌.
-while (true) {
-  //무지성 카운트 UP
-  count++;
-  //만약 input[count]랑 큰수가 일치한다면
-  if (bigMaMa === input[count]) {
-    console.log(bigMaMa + '\n' + count);
-    break;
+let len = +q;
+console.log(z);
+for (let i = 0; i < len; i++) {
+  let count = 1;
+  let sum = 0;
+  for (let j = 0; j < z[i].length; j++) {
+    if (z[i][j] === 'O') {
+      sum += count;
+    }
   }
+
+  console.log(count);
 }

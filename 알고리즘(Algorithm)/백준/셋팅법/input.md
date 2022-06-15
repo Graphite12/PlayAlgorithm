@@ -68,7 +68,7 @@ const [a, ...b] = require('fs')
   .toString()
   .split('\n');
 // 만약 인풋값이 숫자라면
-const input = fs
+const input = require('fs')
   .readFileSync('/dev/stdin')
   .toString()
   .trim()
@@ -76,5 +76,9 @@ const input = fs
   .map(Number);
 
 //만약 인풋값이 줄바뀐 숫자라면
-const input = fs.map(Number);
+const input = require('fs')
+  .readFileSync('/dev/stdin')
+  .toString()
+  .split('\n')
+  .map(Number);
 ```
